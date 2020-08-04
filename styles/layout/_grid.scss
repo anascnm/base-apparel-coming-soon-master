@@ -1,0 +1,20 @@
+.grid {
+    display:flex;
+
+    &__row {
+        flex-flow: row;
+    
+    }
+    
+    &__column {
+        flex-flow: column;
+
+        &--center {
+            align-items: center;
+        }
+
+    
+    }
+
+}
+ 

@@ -1,0 +1,17 @@
+.app {
+    
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+
+    &__main {
+        width: 100%;
+        min-height: 100%;
+    }
+}
+
+.attribution {
+    @include phone {
+        font-size: 1.4rem !important;
+    }
+}

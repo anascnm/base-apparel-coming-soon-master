@@ -1,0 +1,212 @@
+.content {
+    padding: 5rem 0rem;
+    width: 60%;
+    justify-content: center;
+    @include tab-port {
+        width: 80%;
+    }
+    @include phone {
+        width: 100%;
+        padding: 0;
+        justify-content: unset;
+    }
+
+    &__background {
+        background-image: url('.inherit/../../images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__logo {
+        width: 55%;
+
+        img{
+            width: 11rem;
+        }
+        @include phone {
+            width: 100%;
+            padding: 4rem;
+        
+            img {
+                width: 35%;
+            }
+        }
+
+    }
+
+    &__wrapper {
+        width: 55%;
+
+        @include tab-port {
+            max-width: 525px;
+
+        }
+
+    }
+
+    &__image {
+        display: none;
+
+        @include phone {
+            display: unset;
+            width: 100%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+    &__header {
+        display: flex;
+        flex-flow: column;
+        width: 55%;
+        margin-top: 9rem;
+        @include phone {
+            width: 80%;
+            text-align: center;
+        }
+        span {
+            font-size: 4rem;
+            color: $primaryColor;
+            font-weight: 300;
+            letter-spacing: 1.1rem;
+        }
+        
+        strong {
+            font-size: 4rem;
+            color :$neutralColor;
+            letter-spacing: 1.1rem;
+        }
+
+        h5 {
+            line-height: 1.8;
+            font-size: 1rem;
+            color: $primaryColor;
+            font-weight: 400;
+            margin-bottom: 0;
+            @include phone {
+                font-size: 1.9rem;
+            }
+        }
+    }
+
+
+    &__form {
+        margin-top: 3rem;
+        width: 55%;
+        display:flex;
+        flex-flow:column;
+
+        @include phone {
+            width: 80%;
+            margin-bottom: 10rem;
+        }
+        &__input {
+            width: 80%;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: 400;
+            position: relative;
+            background: transparent;
+
+            @include phone {
+                font-size: 1.9rem;
+            }
+            
+            &:focus {
+                border: none;
+                outline: none;
+            }
+
+            &:required {
+                border: none;
+            }
+
+            &:invalid {
+                box-shadow: none;
+                outline: none;
+
+            }
+
+            &::placeholder {
+                color: $primaryColor;
+            }
+          
+         
+        }
+
+        &__input-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba($primaryColor, 0.4);
+            padding: 1rem 2.5rem;
+            border-radius: 5rem;
+            position: relative;
+           
+            &-error {
+                display: none;
+                width: 28px;
+                height: 28px;
+                position: absolute;
+                background-image: url('.inherit/../../images/icon-error.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 50%;
+                right: 25%;
+                z-index: 99;
+                transform: translateY(-50%);
+            }
+
+            &-error--active {
+                display: block;
+            }
+            
+            
+            @include phone {
+            padding: 2rem 2.5rem;
+            }
+        }
+
+        &__error {
+            color: $secondaryColor;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            font-size: 1rem;
+            display: none;
+            @include phone {
+                font-size: 1.75rem;
+                margin-left: 2rem;
+                margin-top: 2rem;
+            }
+
+            &--active {
+                display: unset;
+            }
+        }
+
+        &__submit {
+            width: 20%;
+            border: none;
+            background: $gradientSecondary;
+            transition: all 0.2s ease-in-out;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            border-radius: 5rem;
+            box-shadow: 0px 10px 20px 1px rgba($primaryColor, 0.45);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                background: $gradientTertiary;
+                transition: all 0.2s ease-in-out;
+                box-shadow: 0px 10px 20px 1px rgba($primaryColor, 0.70);
+
+            }
+        }
+    }
+}
